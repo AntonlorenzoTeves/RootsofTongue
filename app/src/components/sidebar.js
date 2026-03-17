@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
 
 // standardizing imports based on your file tree
@@ -9,25 +8,31 @@ import HomeIcon from '../images/SVG/home1.svg';
 import AboutIcon from '../images/SVG/badge.svg';
 import SettingsIcon from '../images/SVG/logo.svg';
 
-export default function Sidebar() {
+export default function Sidebar({ onSelectRegion }) {
+  // Each item now has an ID that matches your map pieces and regionData
   const menuItems = [
-    { name: 'HOME', href: '/', icon: HomeIcon },
-    { name: 'ABOUT', href: '/about', icon: AboutIcon },
-    { name: 'SETTINGS', href: '/settings', icon: SettingsIcon },
+    { id: 1, name: 'HOME', icon: HomeIcon },
+    { id: 2, name: 'ABOUT', icon: AboutIcon },
+    { id: 3, name: 'SETTINGS', icon: SettingsIcon },
   ];
 
   return (
     <aside style={styles.sidebar}>
       
-      {/* 1. Sidebar Title: Brings user back to Home (page.js) */}
-      <Link href="/" style={styles.titleLink}>
+      {/* 1. Sidebar Title */}
+      <div style={styles.titleLink}>
         <h2 style={styles.sidebarTitle}>EXPLORE</h2>
         <div style={styles.titleUnderline} />
-      </Link>
+      </div>
       
       <nav style={styles.nav}>
         {menuItems.map((item) => (
-          <Link key={item.name} href={item.href} style={styles.linkWrapper}>
+          // CHANGED: Using a button instead of Link to trigger the "Level 1" interaction
+          <button 
+            key={item.id} 
+            onClick={() => onSelectRegion(item.id)} 
+            style={styles.linkButton}
+          >
             <div style={styles.nameplateContainer}>
               <Image 
                 src={NameplateImg} 
@@ -46,7 +51,7 @@ export default function Sidebar() {
                 <span style={styles.arrow}>›</span>
               </div>
             </div>
-          </Link>
+          </button>
         ))}
       </nav>
     </aside>
@@ -64,9 +69,7 @@ const styles = {
     borderRight: '1px solid #333',
     boxSizing: 'border-box',
   },
-  // Style for the Title Section
   titleLink: {
-    textDecoration: 'none',
     marginBottom: '35px',
     paddingLeft: '15px',
     display: 'block'
@@ -82,7 +85,7 @@ const styles = {
   titleUnderline: {
     width: '50px',
     height: '4px',
-    backgroundColor: '#6b4c1e', // Matches your header brown
+    backgroundColor: '#6b4c1e',
     marginTop: '10px'
   },
   nav: {
@@ -90,8 +93,14 @@ const styles = {
     flexDirection: 'column',
     gap: '15px',
   },
-  linkWrapper: {
-    textDecoration: 'none',
+  // NEW: Style for the interactive button wrapper
+  linkButton: {
+    background: 'transparent',
+    border: 'none',
+    padding: 0,
+    width: '100%',
+    cursor: 'pointer',
+    textAlign: 'left',
   },
   nameplateContainer: {
     position: 'relative',

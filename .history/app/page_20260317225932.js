@@ -59,7 +59,7 @@ export default function Page() {
           display: 'flex'
         }}>
           <MapSection />
-       <img src={BaseMap.src}></img>
+       <img src='./src/images/SVG/googleearth_BC.svg'></img>
           {/* <MapView
             selectedId={selectedRegion}
             onSelectRegion={setSelectedRegion}

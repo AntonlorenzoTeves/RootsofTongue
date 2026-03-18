@@ -6,7 +6,7 @@ import Sidebar from './src/components/sidebar';
 import MapView from './src/components/mapView';
 import InfoPanel from './src/components/infoPanel';
 import MapSection from './src/components/mapSection';
-import BaseMap from './src/images/SVG/googleearth_BC.svg';
+import BaseMap from '../app/src/images/SVG/googleearth_BC.svg';
 
 
 // Import the data so the modal knows what to show
@@ -59,7 +59,14 @@ export default function Page() {
           display: 'flex'
         }}>
           <MapSection />
-       <img src={BaseMap.src}></img>
+           <img 
+                    src={BaseMap} 
+                    width= "500"
+                    alt="BC Satellite" 
+                    fill 
+                    style={{ objectFit: 'contain' }} 
+                    priority
+                  />
           {/* <MapView
             selectedId={selectedRegion}
             onSelectRegion={setSelectedRegion}

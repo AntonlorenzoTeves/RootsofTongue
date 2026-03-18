@@ -35,7 +35,7 @@ export default function MapView() {
       </div>
 
       {/* OVERLAY LAYER: The Interactive Outline Pieces */}
-      {/* {segments.map((sec, index) => (
+      {segments.map((sec, index) => (
         <div key={index} style={styles.layer}>
           <Image 
             src={sec} 
@@ -44,7 +44,7 @@ export default function MapView() {
             style={styles.mapPiece}
           />
         </div>
-      ))} */}
+      ))}
     </div>
   );
 }

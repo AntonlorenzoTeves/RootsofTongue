@@ -59,7 +59,7 @@ export default function Page() {
           display: 'flex'
         }}>
           <MapSection />
-       <img src={BaseMap.src}></img>
+       <img src={BaseMap}></img>
           {/* <MapView
             selectedId={selectedRegion}
             onSelectRegion={setSelectedRegion}

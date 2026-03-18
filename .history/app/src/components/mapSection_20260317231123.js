@@ -53,11 +53,8 @@ export default function MapSection() {
 }
     `}</style>
             <div style={{
-                display: 'flex',
-                position: 'absolute',
-                width: '700px',
-                left: '170px',
-                top: '95px',
+                display: "flex",
+                position: "relative",
             }}>
                 <svg width="0" height="0">
                     <defs>

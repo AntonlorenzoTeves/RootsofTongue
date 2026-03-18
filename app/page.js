@@ -12,7 +12,10 @@ const regionData = {
   1: { title: "Coast Salish", desc: "The Coast Salish languages are a group of ethnically and linguistically related Indigenous peoples of the Pacific Northwest Coast." },
   2: { title: "Interior Salish", desc: "The Interior Salish are an Indigenous group located in the Southern Interior of British Columbia." },
   3: { title: "Northern BC", desc: "Home to diverse language groups across the expansive northern landscapes." },
+  //4: {title}
 };
+
+
 
 export default function Page() {
   const [selectedRegion, setSelectedRegion] = useState(null);
@@ -60,7 +63,8 @@ export default function Page() {
 
         <InfoPanel 
           regionId={selectedRegion} 
-          onImageClick={() => setIsModalOpen(true)} 
+          onImageClick={() => setIsModalOpen(true)}
+          regionData={regionData} 
         />
 
       </div>

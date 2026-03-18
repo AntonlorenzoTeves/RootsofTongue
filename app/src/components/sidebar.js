@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 // standardizing imports based on your file tree
 import NameplateImg from '../images/SVG/nameplate1.svg';
 import HomeIcon from '../images/SVG/home1.svg';
@@ -26,33 +24,42 @@ export default function Sidebar({ onSelectRegion }) {
       </div>
       
       <nav style={styles.nav}>
-        {menuItems.map((item) => (
-          // CHANGED: Using a button instead of Link to trigger the "Level 1" interaction
-          <button 
-            key={item.id} 
-            onClick={() => onSelectRegion(item.id)} 
-            style={styles.linkButton}
-          >
-            <div style={styles.nameplateContainer}>
-              <Image 
-                src={NameplateImg} 
-                alt="" 
-                fill 
-                style={styles.nameplateBg} 
-                priority
-              />
-              
-              <div style={styles.linkContent}>
+        <button id="1" onClick={(
+        )=> {
+          onSelectRegion(1)
+         }
+        }style={styles.linkButton}><div>
+          <img src={NameplateImg.src} style={{position: "absolute"}}/><div style={styles.linkContent}>
                 <div style={styles.iconCircle}>
-                  <Image src={item.icon} alt="" width={22} height={22} />
                 </div>
-                
-                <span style={styles.linkText}>{item.name}</span>
-                <span style={styles.arrow}>›</span>
-              </div>
-            </div>
-          </button>
-        ))}
+
+                <span style={styles.linkText}>Level 1</span>
+              </div></div></button>
+
+
+               <button id="2" onClick={(
+        )=> {
+          onSelectRegion(2)
+         }
+        }style={styles.linkButton}><div>
+          <img src={NameplateImg.src} style={{position: "absolute"}}/><div style={styles.linkContent}>
+                <div style={styles.iconCircle}>
+                </div>
+
+                <span style={styles.linkText}>Level 2</span>
+              </div></div></button>
+
+               <button id="3" onClick={(
+        )=> {
+          onSelectRegion(3)
+         }
+        }style={styles.linkButton}><div>
+          <img src={NameplateImg.src} style={{position: "absolute"}}/><div style={styles.linkContent}>
+                <div style={styles.iconCircle}>
+                </div>
+
+                <span style={styles.linkText}>Level 3</span>
+              </div></div></button>
       </nav>
     </aside>
   );

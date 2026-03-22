@@ -7,12 +7,6 @@ import AboutIcon from '../images/SVG/badge.svg';
 import SettingsIcon from '../images/SVG/logo.svg';
 
 export default function Sidebar({ onSelectRegion }) {
-  // Each item now has an ID that matches your map pieces and regionData
-  const menuItems = [
-    { id: 1, name: 'HOME', icon: HomeIcon },
-    { id: 2, name: 'ABOUT', icon: AboutIcon },
-    { id: 3, name: 'SETTINGS', icon: SettingsIcon },
-  ];
 
   return (
     <aside style={styles.sidebar}>
@@ -33,7 +27,7 @@ export default function Sidebar({ onSelectRegion }) {
                 <div style={styles.iconCircle}>
                 </div>
 
-                <span style={styles.linkText}>Level 1</span>
+                <span style={styles.linkText}>Introduction</span>
               </div></div></button>
 
 

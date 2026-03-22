@@ -1,29 +1,5 @@
-// components/InfoPanel.js
-
-const regionData = {
-  1: { 
-    title: "Coast Salish", 
-    photo: "/images/photos/coast-salish.jpg", 
-    desc: "The Coast Salish languages are a group of ethnically and linguistically related Indigenous peoples of the Pacific Northwest Coast.",
-    facts: "Includes languages like Squamish (Sḵwx̱wú7mesh) and Halkomelem."
-  },
-  2: { 
-    title: "Interior Salish", 
-    photo: "/images/photos/interior-salish.jpg", 
-    desc: "The Interior Salish are an Indigenous group located in the Southern Interior of British Columbia and parts of the US.",
-    facts: "Known for deep linguistic connections to the plateau regions."
-  },
-  3: { 
-    title: "Northern BC", 
-    photo: "/images/photos/northern-bc.jpg", 
-    desc: "Home to diverse language groups across the expansive northern landscapes.",
-    facts: "Includes the Tsimshianic and Athabaskan language families."
-  },
-  // Add entries for 4 through 8 as needed
-};
-
 // ADDED: onImageClick prop here
-export default function InfoPanel({ regionId, onImageClick }) {
+export default function InfoPanel({ regionId, onImageClick, regionData }) {
   
   const data = regionData[regionId] || {
     title: "Select a Region",

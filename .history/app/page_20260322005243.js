@@ -8,7 +8,7 @@ import MapSection from './src/components/mapSection';
 import EmojiSpawner from './src/components/game_emoji'; 
 import BaseMap from './src/images/SVG/googleearth_BC.svg';
 import IndigenousImg from './src/images/SVG/Indigenous_people.jpg';
-import HideAndSeek from './src/components/game_hidenseek'; //need to import this to "Level 3" game
+import HideAndSeek from './src/components/game_hidenseek';
 
 const regionData = {
   1: { 

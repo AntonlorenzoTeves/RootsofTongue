@@ -8,7 +8,6 @@ import MapSection from './src/components/mapSection';
 import EmojiSpawner from './src/components/game_emoji'; 
 import BaseMap from './src/images/SVG/googleearth_BC.svg';
 import IndigenousImg from './src/images/SVG/Indigenous_people.jpg';
-import HideAndSeek from './src/components/game_hidenseek'; //need to import this to "Level 3" game
 
 const regionData = {
   1: { 
@@ -105,7 +104,7 @@ const styles = {
   closeBtn: { position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', color: '#f5e6c8', fontSize: '28px', cursor: 'pointer' }
 };
 
-//Info about langauges:
+// Info about langauges
 //English and French are the msost common languages spoken in Canada today.
 //Before the Euopeans arrival Canada was home to a diverse culture of different langauges.
 //Currently there are 36 different indigenous languages are spoken in British Columbia.

@@ -36,10 +36,21 @@ export default function Page() {
       <Header />
       <div style={styles.layout}>
         <Sidebar onSelectRegion={setSelectedRegion} />
-        <main style={styles.main}>
+        
+        <main style={{
+          flex: 1,
+          position: 'relative',
+          overflow: 'hidden',
+          display: 'flex'
+        }}>
           <MapSection />
-          <img src={BaseMap.src} style={styles.mapImg} alt="Map" />
+       <img src={BaseMap.src}></img>
+          {/* <MapView
+            selectedId={selectedRegion}
+            onSelectRegion={setSelectedRegion}
+          /> */}
         </main>
+        
         <InfoPanel
           regionId={selectedRegion}
           onImageClick={() => setIsModalOpen(true)}

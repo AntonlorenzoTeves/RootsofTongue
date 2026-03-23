@@ -40,3 +40,10 @@ a {
     color-scheme: dark;
   }
 }
+
+.cls-1 {
+        fill: none;
+        stroke: red;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }

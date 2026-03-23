@@ -31,8 +31,7 @@ export default function SearchButton() {
           border: 'none',
           outline: 'none',
           width: '75%',
-          paddingLeft: '35px', // More padding for the larger scale
-          // 2. Increased font size to match the new scale
+          paddingLeft: '35px', 
           fontSize: '28px',
           fontWeight: '900',
           color: '#2c1a0e',

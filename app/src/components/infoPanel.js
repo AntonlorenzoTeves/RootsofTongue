@@ -26,7 +26,7 @@ export default function InfoPanel({ regionId, onImageClick, regionData }) {
         <h3 style={styles.title}>{data.title}</h3>
         <p style={styles.description}>{data.desc}</p>
 
-        <h4 style={styles.subTitle}>Quick Facts</h4>
+        <h4 style={styles.subTitle}>Click on the Image to play the game to find some fun facts</h4>
         <p style={styles.facts}>{data.facts}</p>
       </div>
     </aside>
